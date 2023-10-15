@@ -1,4 +1,4 @@
-# TalkHubAPI
+# TalkHubClient
 
 ## Overview
 This is a Svelte client for the TalkHubAPI, which provides various features, including a video player, forum, photomanager, and messenger.
