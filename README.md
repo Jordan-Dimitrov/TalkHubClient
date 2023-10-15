@@ -1,7 +1,7 @@
 # TalkHubAPI
 
 ## Overview
-This is an ASP.NET Client for the TalkHubAPI, which provides various features, including a video player, forum, photomanager, and messenger.
+This is a Svelte client for the TalkHubAPI, which provides various features, including a video player, forum, photomanager, and messenger.
 ## Getting Started
 ### Prerequisites
 Before you begin, ensure you have the following installed:
