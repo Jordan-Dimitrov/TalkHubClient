@@ -3,6 +3,7 @@
     import axios from "axios";
     import { getJwtToken, setJwtToken } from "$lib/backend";
     import { refreshJwtToken } from "$lib/backend";
+    import { onMount } from "svelte";
     let username: string;
     let password: string;
     const getCategories = async () => {
@@ -18,10 +19,7 @@
         console.log(response.data)
     }
 
-    const refreshInterval = 1000 * 5 * 60;
-    setInterval(refreshJwtToken, refreshInterval);
 
-    refreshJwtToken();
 
 </script>
 <button on:click={getCategories}>Login</button>

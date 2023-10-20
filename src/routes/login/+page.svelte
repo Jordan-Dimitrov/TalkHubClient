@@ -19,11 +19,6 @@
         setJwtToken(response.data);
         console.log(getJwtToken());
     }
-
-    const refreshInterval = 1000 * 5 * 60;
-    setInterval(refreshJwtToken, refreshInterval);
-
-    refreshJwtToken();
 </script>
 <input placeholder="username" type="text" autocomplete="username" bind:value={username}>
 <input placeholder="password" type="password" autocomplete="current-password" bind:value={password}>

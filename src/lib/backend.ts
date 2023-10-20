@@ -1,5 +1,6 @@
 import axios from "axios";
 export const baseUrl = "http://localhost:5231/api";
+import { goto } from '$app/navigation';
 
 let jwtToken: string = "";
 
@@ -19,14 +20,22 @@ export async function refreshJwtToken() {
             withCredentials: true,
         });
 
-        const newJwtToken = response.data;
+        if(response.status === 200){
+            const newJwtToken = response.data;
 
-        setJwtToken(newJwtToken);
-
-        console.log(newJwtToken);
+            setJwtToken(newJwtToken);
+    
+            console.log(newJwtToken);
+        }else
+        {
+            console.log("Error refreshing token");
+            goto('/login');
+        }
     }
     catch{
         setJwtToken("");
+        console.log("Error refreshing token");
+        goto('/login');
     }
 }
 
